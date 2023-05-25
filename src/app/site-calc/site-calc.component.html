@@ -1,0 +1,62 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+<div class="container">
+    <h1>Calculadora de Pagamento de Corte de Cana</h1>
+  
+    <div fxLayout="row" fxLayoutGap="50px" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="shape" fxFlex="50" fxFlex.xs="100">
+        <h3>Retângulo:</h3>
+        <div class="rectangle" [ngStyle]="{ width: rectangleWidth, height: rectangleHeight }">
+          <div class="dimension-label top">A={{ ladoA }}</div>
+          <div class="dimension-label left">B={{ ladoB }}</div>
+          <div class="dimension-label bottom">C={{ ladoC }}</div>
+          <div class="dimension-label right">D={{ ladoD }}</div>
+        </div>
+      </div>
+      <div class="shape" fxFlex="50" fxFlex.xs="100">
+        <h3>Triângulo:</h3>
+        <div class="triangle" [ngStyle]="{ width: triangleWidth, height: triangleHeight }">
+          <div class="dimension-label triangle-left">A={{ ladoA }}</div>
+          <div class="dimension-label triangle-bottom">B={{ ladoB }}</div>
+          <div class="dimension-label triangle-right">C={{ ladoC }}</div>
+        </div>
+      </div>
+    </div>
+  
+    <div fxLayout="column" fxLayoutGap="20px">
+      <div class="form-group">
+        <label for="toneladasInput">Quantidade de Toneladas (s):</label>
+        <input id="toneladasInput" type="number" class="form-control" formControlName="toneladas" matInput>
+      </div>
+  
+      <div class="form-group">
+        <label for="valorInput">Valor por Tonelada:</label>
+        <input id="valorInput" type="number" class="form-control" formControlName="valorPorTonelada" matInput>
+      </div>
+  
+      <div class="form-group">
+        <label for="ladoAInput">Lado A:</label>
+        <input id="ladoAInput" type="number" class="form-control" formControlName="ladoA" matInput>
+      </div>
+  
+      <div class="form-group">
+        <label for="ladoBInput">Lado B:</label>
+        <input id="ladoBInput" type="number" class="form-control" formControlName="ladoB" matInput>
+      </div>
+  
+      <div class="form-group">
+        <label for="ladoCInput">Lado C:</label>
+        <input id="ladoCInput" type="number" class="form-control" formControlName="ladoC" matInput>
+      </div>
+  
+      <div class="form-group">
+        <label for="ladoDInput">Lado D:</label>
+        <input id="ladoDInput" type="number" class="form-control" formControlName="ladoD" matInput>
+      </div>
+    </div>
+    <div class="button-submit" fxLayout="column" fxLayoutGap="20px">
+        <!-- Existing form inputs -->
+      
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+    </div>
+  </div>
+</form>

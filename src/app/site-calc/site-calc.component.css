@@ -1,0 +1,77 @@
+.container {
+    padding: 20px;
+  }
+  
+  .shape {
+    margin-bottom: 50px;
+  }
+  
+  .rectangle {
+    background-color: rgb(34, 20, 182);
+    position: relative;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-bottom: 15vw solid rgb(34, 20, 182);;
+    position: relative;
+  }
+  
+  .dimension-label {
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    padding: 0px;
+  }
+  
+  .top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .dimension-label.triangle-left {
+    position: absolute;
+    left: -4vw;
+    bottom: -11vw;
+    transform: translateX(-100%);
+  }
+  
+  .dimension-label.triangle-bottom {
+    position: absolute;
+    bottom: -15vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dimension-label.triangle-right {
+    position: absolute;
+    right: -4vw;
+    bottom: -11vw;
+    transform: translateX(100%);
+  }
+  
+  .button-submit {
+    padding-top: 20px;
+  }
